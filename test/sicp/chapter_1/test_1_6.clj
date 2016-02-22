@@ -11,4 +11,4 @@
   (assert-equal (average 1 2 3) 2)
   (assert-equal (abs 1) 1)
   (assert-equal (abs -1) 1)
-  (nearly-equal (sqrt-iter 2.0 2) 1.4))
+  (nearly-equal (sqrt-iter 2.0 2) 1.414))
