@@ -4,14 +4,10 @@
             [sicp.chapter-1.exercise-1-7 :refer :all]))
 
 
-(defn nearly-equal [expected actual]
-  (is (> 0.01 (Math/abs (- expected actual)))))
+(deftest test-average
+  (assert-equal (average 1 2 3) 2.0))
 
-(deftest test-1-7
-  (assert-equal (average 1 2 3) 2)
-  (let [n 2]
-    (nearly-equal (sqrt n) (Math/sqrt n)))
-  (let [n 50000]
-    (nearly-equal (sqrt n) (Math/sqrt n)))
-  (let [n 0.0001]
-    (nearly-equal (sqrt n) (Math/sqrt n))))
+(deftest test-solution
+  (map
+    #(nearly-equal (sqrt %1) (Math/sqrt %1))
+    '(3 5 50000 0.12034 4.234123 0.00000001)))
