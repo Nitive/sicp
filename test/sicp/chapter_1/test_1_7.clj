@@ -9,4 +9,9 @@
 
 (deftest test-1-7
   (assert-equal (average 1 2 3) 2)
-  (nearly-equal (sqrt 2.0 2) 1.414))
+  (let [n 2]
+    (nearly-equal (sqrt n) (Math/sqrt n)))
+  (let [n 50000]
+    (nearly-equal (sqrt n) (Math/sqrt n)))
+  (let [n 0.0001]
+    (nearly-equal (sqrt n) (Math/sqrt n))))
