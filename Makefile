@@ -15,7 +15,10 @@ exercise:
 	"./test/sicp/chapter_${c}/test_$$under.clj"; \
 	echo "(ns sicp.chapter-${c}.exercise-$$dash)" > \
 	"./src/sicp/chapter_${c}/exercise_$$under.clj"; \
-	echo "### Упражнение ${e}" > \
+	echo "### Упражнение ${e}\n\n\
+	[Решение](../../src/sicp/chapter_${c}/exercise_$$under.clj)\
+	 • \
+	[Тесты](../../test/sicp/chapter_${c}/test_$$under.clj)" > \
 	"./doc/chapter_${c}/doc_$$under.md"; \
 
 test:
