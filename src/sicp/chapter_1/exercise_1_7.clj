@@ -1,12 +1,11 @@
-(ns sicp.chapter-1.exercise-1-6)
+(ns sicp.chapter-1.exercise-1-7)
 
 
 (defn average [& numbers]
   (/ (reduce + numbers) (count numbers)))
 
 
-(defn abs [number]
-  ((if (pos? number) + -) number))
+(defn square [x] (* x x))
 
 
 (defn improve [guess x]
@@ -14,10 +13,10 @@
 
 
 (defn good-enough? [guess x]
-  (> 0.0001 (abs (- x (* guess guess)))))
+  (> 0.0001 (Math/abs (- x (square guess)))))
 
 
-(defn sqrt-iter [guess x]
+(defn sqrt [guess x]
   (if (good-enough? guess x)
     guess
-    (sqrt-iter (improve guess x) x)))
+    (sqrt (improve guess x) x)))
