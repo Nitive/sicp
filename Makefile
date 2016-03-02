@@ -1,7 +1,7 @@
 # Usage: make c=1 e=1.5 to create files for exercise 1.5 in chapter 1
 # It will create source, test and documentation files
 exercise:
-	dash=$(subst .,-,$(e)); \
+	@dash=$(subst .,-,$(e)); \
 	under=$(subst .,_,$(e)); \
 	chapter=$${under:0:1}; \
 	echo "(ns sicp.chapter-$$chapter.exercise-$$dash)" > \
