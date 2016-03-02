@@ -9,6 +9,6 @@
     :else (A (- x 1)
              (A x (- y 1)))))
 
-(defn f [n] (A 0 n))
-(defn g [n] (A 1 n))
-(defn h [n] (A 2 n))
+(defn f [x] (A 0 x))
+(defn g [x] (A 1 x))
+(defn h [x] (A 2 x))
